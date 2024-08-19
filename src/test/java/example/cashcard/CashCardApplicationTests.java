@@ -112,5 +112,33 @@ class CashCardApplicationTests {
         JSONArray amounts = documentContext.read("$..amount");
         assertThat(amounts).containsExactly(1.00, 123.45, 150.00);
     }
+    @Test
+    void shouldNotReturnACashCardWhenUsingBadCredentials() {
+        ResponseEntity<String> response = restTemplate
+                .withBasicAuth("BAD-USER", "abc123")
+                .getForEntity("/cashcards/99", String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.UNAUTHORIZED);
+
+        response = restTemplate
+                .withBasicAuth("sarah1", "BAD-PASSWORD")
+                .getForEntity("/cashcards/99", String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.UNAUTHORIZED);
+    }
+    @Test
+    void shouldRejectUsersWhoAreNotCardOwners(){
+        ResponseEntity<String> repsonse = restTemplate
+                .withBasicAuth("hank-owns-no-cards", "qwer123")
+                .getForEntity("/cashcards/99", String.class);
+
+        assertThat(repsonse.getStatusCode()).isEqualTo(HttpStatus.FORBIDDEN);
+    }
+    @Test
+    void shouldNotAllowAccessToCashCardsTheyDoNotOwn() {
+        ResponseEntity<String> response = restTemplate
+                .withBasicAuth("sarah1", "abc123")
+                .getForEntity("/cashcards/102", String.class); //other user's
+        // data
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+    }
 
 }

@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">7</div>
+<div class="counter">10</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">4</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.853s</div>
+<div class="counter">2.416s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">60%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,91 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="shouldNotAllowAccessToCashCardsTheyDoNotOwn()"></a>
+<h3 class="failures">shouldNotAllowAccessToCashCardsTheyDoNotOwn()</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError: 
+expected: 404 NOT_FOUND
+ but was: 200 OK
+	at java.base@17.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@17.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base@17.0.2/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@17.0.2/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at app//example.cashcard.CashCardApplicationTests.shouldNotAllowAccessToCashCardsTheyDoNotOwn(CashCardApplicationTests.java:141)
+	at java.base@17.0.2/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base@17.0.2/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.2/java.util.ArrayList.forEach(ArrayList.java:1511)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldReturnASortedPageOfCashCards()"></a>
+<h3 class="failures">shouldReturnASortedPageOfCashCards()</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError: 
+expected: 150.0
+ but was: 200.0
+	at java.base@17.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@17.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base@17.0.2/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@17.0.2/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at app//example.cashcard.CashCardApplicationTests.shouldReturnASortedPageOfCashCards(CashCardApplicationTests.java:101)
+	at java.base@17.0.2/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base@17.0.2/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.2/java.util.ArrayList.forEach(ArrayList.java:1511)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldReturnASortedPageOfCashCardsWithNoParametersAndUseDefaultValues()"></a>
+<h3 class="failures">shouldReturnASortedPageOfCashCardsWithNoParametersAndUseDefaultValues()</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError: 
+expected: 3
+ but was: 4
+	at java.base@17.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@17.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base@17.0.2/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@17.0.2/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at app//example.cashcard.CashCardApplicationTests.shouldReturnASortedPageOfCashCardsWithNoParametersAndUseDefaultValues(CashCardApplicationTests.java:110)
+	at java.base@17.0.2/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base@17.0.2/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.2/java.util.ArrayList.forEach(ArrayList.java:1511)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="shouldReturnAllCashCardsWhenListIsRequested()"></a>
+<h3 class="failures">shouldReturnAllCashCardsWhenListIsRequested()</h3>
+<span class="code">
+<pre>org.opentest4j.AssertionFailedError: 
+expected: 3
+ but was: 4
+	at java.base@17.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@17.0.2/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base@17.0.2/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@17.0.2/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at app//example.cashcard.CashCardApplicationTests.shouldReturnAllCashCardsWhenListIsRequested(CashCardApplicationTests.java:73)
+	at java.base@17.0.2/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base@17.0.2/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.2/java.util.ArrayList.forEach(ArrayList.java:1511)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -79,7 +157,17 @@
 </thead>
 <tr>
 <td class="success">shouldCreateANewCashCard()</td>
-<td class="success">0.280s</td>
+<td class="success">0.279s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">shouldNotAllowAccessToCashCardsTheyDoNotOwn()</td>
+<td class="failures">0.176s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">shouldNotReturnACashCardWhenUsingBadCredentials()</td>
+<td class="success">0.241s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -88,37 +176,42 @@
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">shouldReturnACashCardWhenDataIsSaved()</td>
-<td class="success">0.177s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">shouldReturnAPageOfCashCards()</td>
-<td class="success">0.165s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">shouldReturnASortedPageOfCashCards()</td>
-<td class="success">0.736s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">shouldReturnASortedPageOfCashCardsWithNoParametersAndUseDefaultValues()</td>
+<td class="success">shouldRejectUsersWhoAreNotCardOwners()</td>
 <td class="success">0.164s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">shouldReturnAllCashCardsWhenListIsRequested()</td>
-<td class="success">0.166s</td>
+<td class="success">shouldReturnACashCardWhenDataIsSaved()</td>
+<td class="success">0.167s</td>
 <td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">shouldReturnAPageOfCashCards()</td>
+<td class="success">0.171s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">shouldReturnASortedPageOfCashCards()</td>
+<td class="failures">0.719s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">shouldReturnASortedPageOfCashCardsWithNoParametersAndUseDefaultValues()</td>
+<td class="failures">0.166s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">shouldReturnAllCashCardsWhenListIsRequested()</td>
+<td class="failures">0.168s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>09:06:40.541 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [example.cashcard.CashCardApplicationTests]: CashCardApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-09:06:40.595 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration example.cashcard.CashCardApplication for test class example.cashcard.CashCardApplicationTests
+<pre>20:58:52.953 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [example.cashcard.CashCardApplicationTests]: CashCardApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:58:53.006 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration example.cashcard.CashCardApplication for test class example.cashcard.CashCardApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -129,25 +222,25 @@
 
  :: Spring Boot ::                (v3.3.2)
 
-2024-08-19T09:06:40.758+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.2 with PID 11844 (started by andrewmcclelland in /Users/andrewmcclelland/Documents/cashcard)
-2024-08-19T09:06:40.759+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-08-19T09:06:41.013+01:00  INFO 11844 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-08-19T09:06:41.032+01:00  INFO 11844 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JDBC repository interface.
-2024-08-19T09:06:41.164+01:00  WARN 11844 --- [cashcard] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2024-08-19T09:06:41.177+01:00  INFO 11844 --- [cashcard] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2024-08-19T09:06:41.292+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2024-08-19T09:06:41.297+01:00  INFO 11844 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-19T09:06:41.297+01:00  INFO 11844 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-19T09:06:41.324+01:00  INFO 11844 --- [cashcard] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-19T09:06:41.325+01:00  INFO 11844 --- [cashcard] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 557 ms
-2024-08-19T09:06:41.369+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:db4d91ac-4e22-4b69-adc3-d43e8d7b69b6;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2024-08-19T09:06:41.656+01:00  INFO 11844 --- [cashcard] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name testOnlyUsers
-2024-08-19T09:06:41.891+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 56914 (http) with context path '/'
-2024-08-19T09:06:41.896+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 1.242 seconds (process running for 1.701)
-2024-08-19T09:06:42.339+01:00  INFO 11844 --- [cashcard] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-19T09:06:42.339+01:00  INFO 11844 --- [cashcard] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-19T09:06:42.340+01:00  INFO 11844 --- [cashcard] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-08-19T09:06:42.628+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:db4d91ac-4e22-4b69-adc3-d43e8d7b69b6;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2024-08-19T20:58:53.173+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.2 with PID 14256 (started by andrewmcclelland in /Users/andrewmcclelland/Documents/cashcard)
+2024-08-19T20:58:53.174+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-08-19T20:58:53.422+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-08-19T20:58:53.441+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JDBC repository interface.
+2024-08-19T20:58:53.575+01:00  WARN 14256 --- [cashcard] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-19T20:58:53.589+01:00  INFO 14256 --- [cashcard] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-19T20:58:53.703+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-08-19T20:58:53.709+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-19T20:58:53.709+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-19T20:58:53.736+01:00  INFO 14256 --- [cashcard] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-19T20:58:53.737+01:00  INFO 14256 --- [cashcard] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 554 ms
+2024-08-19T20:58:53.781+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:4b4c42bf-7e2d-4e8e-b709-29f8b60ef11a;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-08-19T20:58:54.142+01:00  INFO 14256 --- [cashcard] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name testOnlyUsers
+2024-08-19T20:58:54.359+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 59955 (http) with context path '/'
+2024-08-19T20:58:54.363+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 1.3 seconds (process running for 1.763)
+2024-08-19T20:58:54.794+01:00  INFO 14256 --- [cashcard] [o-auto-1-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-19T20:58:54.794+01:00  INFO 14256 --- [cashcard] [o-auto-1-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-19T20:58:54.795+01:00  INFO 14256 --- [cashcard] [o-auto-1-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-19T20:58:55.079+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:4b4c42bf-7e2d-4e8e-b709-29f8b60ef11a;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -158,25 +251,25 @@
 
  :: Spring Boot ::                (v3.3.2)
 
-2024-08-19T09:06:42.650+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.2 with PID 11844 (started by andrewmcclelland in /Users/andrewmcclelland/Documents/cashcard)
-2024-08-19T09:06:42.651+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-08-19T09:06:42.715+01:00  INFO 11844 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-08-19T09:06:42.719+01:00  INFO 11844 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 1 JDBC repository interface.
-2024-08-19T09:06:42.739+01:00  WARN 11844 --- [cashcard] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2024-08-19T09:06:42.739+01:00  INFO 11844 --- [cashcard] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2024-08-19T09:06:42.751+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2024-08-19T09:06:42.751+01:00  INFO 11844 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-19T09:06:42.751+01:00  INFO 11844 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-19T09:06:42.758+01:00  INFO 11844 --- [cashcard] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-19T09:06:42.758+01:00  INFO 11844 --- [cashcard] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 106 ms
-2024-08-19T09:06:42.769+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:5261453a-e4e3-4cf5-a70d-e33d02193966;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2024-08-19T09:06:42.869+01:00  INFO 11844 --- [cashcard] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name testOnlyUsers
-2024-08-19T09:06:42.924+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 56917 (http) with context path '/'
-2024-08-19T09:06:42.926+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.29 seconds (process running for 2.731)
-2024-08-19T09:06:42.931+01:00  INFO 11844 --- [cashcard] [o-auto-2-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-19T09:06:42.931+01:00  INFO 11844 --- [cashcard] [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-19T09:06:42.931+01:00  INFO 11844 --- [cashcard] [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-08-19T09:06:43.103+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:5261453a-e4e3-4cf5-a70d-e33d02193966;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2024-08-19T20:58:55.100+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.2 with PID 14256 (started by andrewmcclelland in /Users/andrewmcclelland/Documents/cashcard)
+2024-08-19T20:58:55.100+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-08-19T20:58:55.160+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-08-19T20:58:55.162+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 1 JDBC repository interface.
+2024-08-19T20:58:55.180+01:00  WARN 14256 --- [cashcard] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-19T20:58:55.181+01:00  INFO 14256 --- [cashcard] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-19T20:58:55.193+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-08-19T20:58:55.194+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-19T20:58:55.194+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-19T20:58:55.200+01:00  INFO 14256 --- [cashcard] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-19T20:58:55.200+01:00  INFO 14256 --- [cashcard] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 99 ms
+2024-08-19T20:58:55.210+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:613ad7f1-d3e5-417b-8296-8cf1c98c15fa;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-08-19T20:58:55.386+01:00  INFO 14256 --- [cashcard] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name testOnlyUsers
+2024-08-19T20:58:55.442+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 59958 (http) with context path '/'
+2024-08-19T20:58:55.444+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.356 seconds (process running for 2.844)
+2024-08-19T20:58:55.448+01:00  INFO 14256 --- [cashcard] [o-auto-2-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-19T20:58:55.448+01:00  INFO 14256 --- [cashcard] [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-19T20:58:55.449+01:00  INFO 14256 --- [cashcard] [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-19T20:58:55.620+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:613ad7f1-d3e5-417b-8296-8cf1c98c15fa;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -187,25 +280,25 @@
 
  :: Spring Boot ::                (v3.3.2)
 
-2024-08-19T09:06:43.115+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.2 with PID 11844 (started by andrewmcclelland in /Users/andrewmcclelland/Documents/cashcard)
-2024-08-19T09:06:43.115+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-08-19T09:06:43.171+01:00  INFO 11844 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-08-19T09:06:43.173+01:00  INFO 11844 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 1 JDBC repository interface.
-2024-08-19T09:06:43.191+01:00  WARN 11844 --- [cashcard] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2024-08-19T09:06:43.192+01:00  INFO 11844 --- [cashcard] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2024-08-19T09:06:43.202+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2024-08-19T09:06:43.203+01:00  INFO 11844 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-19T09:06:43.203+01:00  INFO 11844 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-19T09:06:43.208+01:00  INFO 11844 --- [cashcard] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-19T09:06:43.208+01:00  INFO 11844 --- [cashcard] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 93 ms
-2024-08-19T09:06:43.217+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:964074f3-bd5a-43cc-82b7-9a3e3e542409;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2024-08-19T09:06:43.312+01:00  INFO 11844 --- [cashcard] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name testOnlyUsers
-2024-08-19T09:06:43.355+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 56920 (http) with context path '/'
-2024-08-19T09:06:43.357+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.251 seconds (process running for 3.162)
-2024-08-19T09:06:43.365+01:00  INFO 11844 --- [cashcard] [o-auto-3-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-19T09:06:43.365+01:00  INFO 11844 --- [cashcard] [o-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-19T09:06:43.366+01:00  INFO 11844 --- [cashcard] [o-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-08-19T09:06:43.637+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:964074f3-bd5a-43cc-82b7-9a3e3e542409;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2024-08-19T20:58:55.632+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.2 with PID 14256 (started by andrewmcclelland in /Users/andrewmcclelland/Documents/cashcard)
+2024-08-19T20:58:55.632+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-08-19T20:58:55.685+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-08-19T20:58:55.688+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 1 JDBC repository interface.
+2024-08-19T20:58:55.704+01:00  WARN 14256 --- [cashcard] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-19T20:58:55.705+01:00  INFO 14256 --- [cashcard] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-19T20:58:55.715+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-08-19T20:58:55.715+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-19T20:58:55.715+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-19T20:58:55.721+01:00  INFO 14256 --- [cashcard] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-19T20:58:55.721+01:00  INFO 14256 --- [cashcard] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 89 ms
+2024-08-19T20:58:55.730+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:c8d5738c-cbde-4844-a9b1-deac9d9f502e;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-08-19T20:58:55.896+01:00  INFO 14256 --- [cashcard] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name testOnlyUsers
+2024-08-19T20:58:55.934+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 59961 (http) with context path '/'
+2024-08-19T20:58:55.936+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.313 seconds (process running for 3.336)
+2024-08-19T20:58:55.939+01:00  INFO 14256 --- [cashcard] [o-auto-3-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-19T20:58:55.939+01:00  INFO 14256 --- [cashcard] [o-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-19T20:58:55.940+01:00  INFO 14256 --- [cashcard] [o-auto-3-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-08-19T20:58:56.102+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:c8d5738c-cbde-4844-a9b1-deac9d9f502e;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -216,25 +309,25 @@
 
  :: Spring Boot ::                (v3.3.2)
 
-2024-08-19T09:06:43.649+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.2 with PID 11844 (started by andrewmcclelland in /Users/andrewmcclelland/Documents/cashcard)
-2024-08-19T09:06:43.649+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-08-19T09:06:43.691+01:00  INFO 11844 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-08-19T09:06:43.693+01:00  INFO 11844 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 1 JDBC repository interface.
-2024-08-19T09:06:43.706+01:00  WARN 11844 --- [cashcard] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2024-08-19T09:06:43.707+01:00  INFO 11844 --- [cashcard] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2024-08-19T09:06:43.716+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2024-08-19T09:06:43.717+01:00  INFO 11844 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-19T09:06:43.717+01:00  INFO 11844 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-19T09:06:43.722+01:00  INFO 11844 --- [cashcard] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-19T09:06:43.722+01:00  INFO 11844 --- [cashcard] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 72 ms
-2024-08-19T09:06:43.730+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:01065c3c-58a9-44f8-b8e5-384adff5e4aa;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2024-08-19T09:06:43.823+01:00  INFO 11844 --- [cashcard] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name testOnlyUsers
-2024-08-19T09:06:43.859+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 56923 (http) with context path '/'
-2024-08-19T09:06:43.861+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.22 seconds (process running for 3.666)
-2024-08-19T09:06:43.865+01:00  INFO 11844 --- [cashcard] [o-auto-4-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-19T09:06:43.865+01:00  INFO 11844 --- [cashcard] [o-auto-4-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-19T09:06:43.865+01:00  INFO 11844 --- [cashcard] [o-auto-4-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-08-19T09:06:44.025+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:01065c3c-58a9-44f8-b8e5-384adff5e4aa;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2024-08-19T20:58:56.115+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.2 with PID 14256 (started by andrewmcclelland in /Users/andrewmcclelland/Documents/cashcard)
+2024-08-19T20:58:56.115+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-08-19T20:58:56.157+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-08-19T20:58:56.159+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 1 JDBC repository interface.
+2024-08-19T20:58:56.172+01:00  WARN 14256 --- [cashcard] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-19T20:58:56.173+01:00  INFO 14256 --- [cashcard] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-19T20:58:56.181+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-08-19T20:58:56.182+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-19T20:58:56.182+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-19T20:58:56.188+01:00  INFO 14256 --- [cashcard] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-19T20:58:56.188+01:00  INFO 14256 --- [cashcard] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 72 ms
+2024-08-19T20:58:56.196+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:042eeaf0-ca58-4e75-8274-4bc2e00e50e0;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-08-19T20:58:56.363+01:00  INFO 14256 --- [cashcard] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name testOnlyUsers
+2024-08-19T20:58:56.398+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 59964 (http) with context path '/'
+2024-08-19T20:58:56.400+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.295 seconds (process running for 3.8)
+2024-08-19T20:58:56.408+01:00  INFO 14256 --- [cashcard] [o-auto-4-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-19T20:58:56.408+01:00  INFO 14256 --- [cashcard] [o-auto-4-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-19T20:58:56.408+01:00  INFO 14256 --- [cashcard] [o-auto-4-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-08-19T20:58:56.679+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:042eeaf0-ca58-4e75-8274-4bc2e00e50e0;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -245,25 +338,25 @@
 
  :: Spring Boot ::                (v3.3.2)
 
-2024-08-19T09:06:44.036+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.2 with PID 11844 (started by andrewmcclelland in /Users/andrewmcclelland/Documents/cashcard)
-2024-08-19T09:06:44.036+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-08-19T09:06:44.076+01:00  INFO 11844 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-08-19T09:06:44.078+01:00  INFO 11844 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 1 JDBC repository interface.
-2024-08-19T09:06:44.090+01:00  WARN 11844 --- [cashcard] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2024-08-19T09:06:44.091+01:00  INFO 11844 --- [cashcard] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2024-08-19T09:06:44.101+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2024-08-19T09:06:44.101+01:00  INFO 11844 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-19T09:06:44.101+01:00  INFO 11844 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-19T09:06:44.106+01:00  INFO 11844 --- [cashcard] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-19T09:06:44.106+01:00  INFO 11844 --- [cashcard] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 70 ms
-2024-08-19T09:06:44.113+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:e2428574-d9d8-4db9-b7fa-c50da0954100;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2024-08-19T09:06:44.204+01:00  INFO 11844 --- [cashcard] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name testOnlyUsers
-2024-08-19T09:06:44.238+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 56926 (http) with context path '/'
-2024-08-19T09:06:44.240+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.213 seconds (process running for 4.045)
-2024-08-19T09:06:44.243+01:00  INFO 11844 --- [cashcard] [o-auto-5-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-19T09:06:44.243+01:00  INFO 11844 --- [cashcard] [o-auto-5-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-19T09:06:44.244+01:00  INFO 11844 --- [cashcard] [o-auto-5-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-08-19T09:06:44.405+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:e2428574-d9d8-4db9-b7fa-c50da0954100;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2024-08-19T20:58:56.690+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.2 with PID 14256 (started by andrewmcclelland in /Users/andrewmcclelland/Documents/cashcard)
+2024-08-19T20:58:56.690+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-08-19T20:58:56.730+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-08-19T20:58:56.732+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 1 JDBC repository interface.
+2024-08-19T20:58:56.744+01:00  WARN 14256 --- [cashcard] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-19T20:58:56.745+01:00  INFO 14256 --- [cashcard] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-19T20:58:56.753+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-08-19T20:58:56.753+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-19T20:58:56.753+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-19T20:58:56.759+01:00  INFO 14256 --- [cashcard] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-19T20:58:56.759+01:00  INFO 14256 --- [cashcard] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 69 ms
+2024-08-19T20:58:56.766+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:cc13a02d-8f07-4601-96b7-8d5ca86a1166;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-08-19T20:58:56.933+01:00  INFO 14256 --- [cashcard] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name testOnlyUsers
+2024-08-19T20:58:56.962+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 59967 (http) with context path '/'
+2024-08-19T20:58:56.964+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.283 seconds (process running for 4.364)
+2024-08-19T20:58:56.967+01:00  INFO 14256 --- [cashcard] [o-auto-5-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-19T20:58:56.968+01:00  INFO 14256 --- [cashcard] [o-auto-5-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-19T20:58:56.968+01:00  INFO 14256 --- [cashcard] [o-auto-5-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-08-19T20:58:57.128+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:cc13a02d-8f07-4601-96b7-8d5ca86a1166;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -274,25 +367,25 @@
 
  :: Spring Boot ::                (v3.3.2)
 
-2024-08-19T09:06:44.419+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.2 with PID 11844 (started by andrewmcclelland in /Users/andrewmcclelland/Documents/cashcard)
-2024-08-19T09:06:44.419+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-08-19T09:06:44.457+01:00  INFO 11844 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-08-19T09:06:44.459+01:00  INFO 11844 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 1 JDBC repository interface.
-2024-08-19T09:06:44.470+01:00  WARN 11844 --- [cashcard] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2024-08-19T09:06:44.471+01:00  INFO 11844 --- [cashcard] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2024-08-19T09:06:44.479+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2024-08-19T09:06:44.480+01:00  INFO 11844 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-19T09:06:44.480+01:00  INFO 11844 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-19T09:06:44.485+01:00  INFO 11844 --- [cashcard] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-19T09:06:44.485+01:00  INFO 11844 --- [cashcard] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 65 ms
-2024-08-19T09:06:44.491+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:8b16ce44-905b-4876-bd01-5b5fdebd8b00;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2024-08-19T09:06:44.584+01:00  INFO 11844 --- [cashcard] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name testOnlyUsers
-2024-08-19T09:06:44.616+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 56929 (http) with context path '/'
-2024-08-19T09:06:44.621+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.214 seconds (process running for 4.426)
-2024-08-19T09:06:44.625+01:00  INFO 11844 --- [cashcard] [o-auto-6-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-19T09:06:44.625+01:00  INFO 11844 --- [cashcard] [o-auto-6-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-19T09:06:44.625+01:00  INFO 11844 --- [cashcard] [o-auto-6-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-08-19T09:06:44.784+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:8b16ce44-905b-4876-bd01-5b5fdebd8b00;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2024-08-19T20:58:57.138+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.2 with PID 14256 (started by andrewmcclelland in /Users/andrewmcclelland/Documents/cashcard)
+2024-08-19T20:58:57.138+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-08-19T20:58:57.175+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-08-19T20:58:57.177+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 1 JDBC repository interface.
+2024-08-19T20:58:57.188+01:00  WARN 14256 --- [cashcard] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-19T20:58:57.189+01:00  INFO 14256 --- [cashcard] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-19T20:58:57.196+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-08-19T20:58:57.197+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-19T20:58:57.197+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-19T20:58:57.202+01:00  INFO 14256 --- [cashcard] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-19T20:58:57.202+01:00  INFO 14256 --- [cashcard] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 64 ms
+2024-08-19T20:58:57.210+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:0be9407b-a91e-4117-ad0f-08178ca960c9;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-08-19T20:58:57.381+01:00  INFO 14256 --- [cashcard] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name testOnlyUsers
+2024-08-19T20:58:57.410+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 59970 (http) with context path '/'
+2024-08-19T20:58:57.412+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.282 seconds (process running for 4.812)
+2024-08-19T20:58:57.415+01:00  INFO 14256 --- [cashcard] [o-auto-6-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-19T20:58:57.415+01:00  INFO 14256 --- [cashcard] [o-auto-6-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-19T20:58:57.416+01:00  INFO 14256 --- [cashcard] [o-auto-6-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-19T20:58:57.583+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:0be9407b-a91e-4117-ad0f-08178ca960c9;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -303,25 +396,112 @@
 
  :: Spring Boot ::                (v3.3.2)
 
-2024-08-19T09:06:44.793+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.2 with PID 11844 (started by andrewmcclelland in /Users/andrewmcclelland/Documents/cashcard)
-2024-08-19T09:06:44.794+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-08-19T09:06:44.829+01:00  INFO 11844 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-08-19T09:06:44.831+01:00  INFO 11844 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 1 JDBC repository interface.
-2024-08-19T09:06:44.841+01:00  WARN 11844 --- [cashcard] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2024-08-19T09:06:44.841+01:00  INFO 11844 --- [cashcard] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-2024-08-19T09:06:44.849+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
-2024-08-19T09:06:44.849+01:00  INFO 11844 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-19T09:06:44.849+01:00  INFO 11844 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-19T09:06:44.853+01:00  INFO 11844 --- [cashcard] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-19T09:06:44.853+01:00  INFO 11844 --- [cashcard] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 59 ms
-2024-08-19T09:06:44.860+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:77807ea5-4d43-469d-9e3a-65de85ddaa84;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2024-08-19T09:06:44.950+01:00  INFO 11844 --- [cashcard] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name testOnlyUsers
-2024-08-19T09:06:44.983+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 56932 (http) with context path '/'
-2024-08-19T09:06:44.984+01:00  INFO 11844 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.197 seconds (process running for 4.789)
-2024-08-19T09:06:44.987+01:00  INFO 11844 --- [cashcard] [o-auto-7-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-19T09:06:44.988+01:00  INFO 11844 --- [cashcard] [o-auto-7-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-19T09:06:44.988+01:00  INFO 11844 --- [cashcard] [o-auto-7-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-08-19T09:06:45.148+01:00  INFO 11844 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:77807ea5-4d43-469d-9e3a-65de85ddaa84;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+2024-08-19T20:58:57.591+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.2 with PID 14256 (started by andrewmcclelland in /Users/andrewmcclelland/Documents/cashcard)
+2024-08-19T20:58:57.591+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-08-19T20:58:57.625+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-08-19T20:58:57.627+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 1 JDBC repository interface.
+2024-08-19T20:58:57.639+01:00  WARN 14256 --- [cashcard] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-19T20:58:57.640+01:00  INFO 14256 --- [cashcard] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-19T20:58:57.647+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-08-19T20:58:57.647+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-19T20:58:57.647+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-19T20:58:57.653+01:00  INFO 14256 --- [cashcard] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-19T20:58:57.653+01:00  INFO 14256 --- [cashcard] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 61 ms
+2024-08-19T20:58:57.659+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:de81a3bd-51a0-4689-ab65-e54f17500e17;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-08-19T20:58:57.824+01:00  INFO 14256 --- [cashcard] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name testOnlyUsers
+2024-08-19T20:58:57.853+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 59973 (http) with context path '/'
+2024-08-19T20:58:57.855+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.271 seconds (process running for 5.255)
+2024-08-19T20:58:57.858+01:00  INFO 14256 --- [cashcard] [o-auto-7-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-19T20:58:57.858+01:00  INFO 14256 --- [cashcard] [o-auto-7-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-19T20:58:57.859+01:00  INFO 14256 --- [cashcard] [o-auto-7-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-19T20:58:58.096+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:de81a3bd-51a0-4689-ab65-e54f17500e17;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2024-08-19T20:58:58.106+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.2 with PID 14256 (started by andrewmcclelland in /Users/andrewmcclelland/Documents/cashcard)
+2024-08-19T20:58:58.106+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-08-19T20:58:58.141+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-08-19T20:58:58.143+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 1 JDBC repository interface.
+2024-08-19T20:58:58.156+01:00  WARN 14256 --- [cashcard] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-19T20:58:58.157+01:00  INFO 14256 --- [cashcard] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-19T20:58:58.165+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-08-19T20:58:58.166+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-19T20:58:58.166+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-19T20:58:58.170+01:00  INFO 14256 --- [cashcard] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-19T20:58:58.170+01:00  INFO 14256 --- [cashcard] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 63 ms
+2024-08-19T20:58:58.177+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:0a4cd709-0722-4eb1-adc0-c03b5fb4a64a;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-08-19T20:58:58.342+01:00  INFO 14256 --- [cashcard] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name testOnlyUsers
+2024-08-19T20:58:58.379+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 59976 (http) with context path '/'
+2024-08-19T20:58:58.381+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.282 seconds (process running for 5.78)
+2024-08-19T20:58:58.385+01:00  INFO 14256 --- [cashcard] [o-auto-8-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-19T20:58:58.385+01:00  INFO 14256 --- [cashcard] [o-auto-8-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-19T20:58:58.385+01:00  INFO 14256 --- [cashcard] [o-auto-8-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-08-19T20:58:58.548+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:0a4cd709-0722-4eb1-adc0-c03b5fb4a64a;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2024-08-19T20:58:58.557+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.2 with PID 14256 (started by andrewmcclelland in /Users/andrewmcclelland/Documents/cashcard)
+2024-08-19T20:58:58.557+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-08-19T20:58:58.593+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-08-19T20:58:58.594+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 1 JDBC repository interface.
+2024-08-19T20:58:58.605+01:00  WARN 14256 --- [cashcard] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-19T20:58:58.606+01:00  INFO 14256 --- [cashcard] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-19T20:58:58.612+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-08-19T20:58:58.612+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-19T20:58:58.612+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-19T20:58:58.617+01:00  INFO 14256 --- [cashcard] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-19T20:58:58.617+01:00  INFO 14256 --- [cashcard] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 60 ms
+2024-08-19T20:58:58.625+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:afd11574-0d87-4ea1-b107-08c21bc5e07e;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-08-19T20:58:58.788+01:00  INFO 14256 --- [cashcard] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name testOnlyUsers
+2024-08-19T20:58:58.819+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 59979 (http) with context path '/'
+2024-08-19T20:58:58.822+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.272 seconds (process running for 6.222)
+2024-08-19T20:58:58.825+01:00  INFO 14256 --- [cashcard] [o-auto-9-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-19T20:58:58.825+01:00  INFO 14256 --- [cashcard] [o-auto-9-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-19T20:58:58.826+01:00  INFO 14256 --- [cashcard] [o-auto-9-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-19T20:58:58.987+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:afd11574-0d87-4ea1-b107-08c21bc5e07e;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2024-08-19T20:58:58.997+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Starting CashCardApplicationTests using Java 17.0.2 with PID 14256 (started by andrewmcclelland in /Users/andrewmcclelland/Documents/cashcard)
+2024-08-19T20:58:58.997+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-08-19T20:58:59.031+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-08-19T20:58:59.033+01:00  INFO 14256 --- [cashcard] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 1 JDBC repository interface.
+2024-08-19T20:58:59.043+01:00  WARN 14256 --- [cashcard] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-08-19T20:58:59.043+01:00  INFO 14256 --- [cashcard] [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-08-19T20:58:59.050+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-08-19T20:58:59.050+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-19T20:58:59.050+01:00  INFO 14256 --- [cashcard] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-19T20:58:59.055+01:00  INFO 14256 --- [cashcard] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-19T20:58:59.055+01:00  INFO 14256 --- [cashcard] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 58 ms
+2024-08-19T20:58:59.061+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:baf4ffc5-7327-401e-b8d9-6b57cb030587;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-08-19T20:58:59.230+01:00  INFO 14256 --- [cashcard] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name testOnlyUsers
+2024-08-19T20:58:59.256+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 59982 (http) with context path '/'
+2024-08-19T20:58:59.258+01:00  INFO 14256 --- [cashcard] [    Test worker] e.cashcard.CashCardApplicationTests      : Started CashCardApplicationTests in 0.267 seconds (process running for 6.657)
+2024-08-19T20:58:59.261+01:00  INFO 14256 --- [cashcard] [-auto-10-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-19T20:58:59.261+01:00  INFO 14256 --- [cashcard] [-auto-10-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-19T20:58:59.261+01:00  INFO 14256 --- [cashcard] [-auto-10-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-08-19T20:58:59.423+01:00  INFO 14256 --- [cashcard] [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Shutting down embedded database: url='jdbc:h2:mem:baf4ffc5-7327-401e-b8d9-6b57cb030587;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false'
 </pre>
 </span>
 </div>
@@ -333,7 +513,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.8</a> at 19 Aug 2024, 09:06:45</p>
+<a href="http://www.gradle.org">Gradle 8.8</a> at 19 Aug 2024, 20:58:59</p>
 </div>
 </div>
 </body>

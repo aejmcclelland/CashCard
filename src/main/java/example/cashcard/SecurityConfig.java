@@ -21,7 +21,7 @@ import org.springframework.security.web.SecurityFilterChain;
             http
                     .authorizeHttpRequests(request -> request
                             .requestMatchers("/cashcards/**")
-                            .authenticated())
+                            .hasRole("CARD-OWNER"))
                     .httpBasic(Customizer.withDefaults())
                     .csrf(AbstractHttpConfigurer::disable);
             return http.build();
@@ -37,9 +37,14 @@ import org.springframework.security.web.SecurityFilterChain;
         UserDetails sarah = users
                 .username("sarah1")
                 .password(passwordEncoder.encode("abc123"))
-                .roles() // No roles for now
+                .roles("CARD-OWNER") // No roles for now
                 .build();
-        return new InMemoryUserDetailsManager(sarah);
+        UserDetails hankOwnsNoCards = users
+                .username("hank-owns-no-cards")
+                .password(passwordEncoder.encode("qwer123"))
+                .roles("NON-OWNER")
+                .build();
+        return new InMemoryUserDetailsManager(sarah,hankOwnsNoCards);
     }
     }
 
