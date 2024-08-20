@@ -44,6 +44,11 @@ import org.springframework.security.web.SecurityFilterChain;
                 .password(passwordEncoder.encode("qwer123"))
                 .roles("NON-OWNER")
                 .build();
+        UserDetails kumar = users
+                .username("kumar2")
+                .password(passwordEncoder.encode("xyz789"))
+                .roles("CARD-OWNER")
+                .build();
         return new InMemoryUserDetailsManager(sarah,hankOwnsNoCards);
     }
     }
